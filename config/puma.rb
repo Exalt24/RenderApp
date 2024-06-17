@@ -24,7 +24,7 @@ threads_count = ENV.fetch("RAILS_MAX_THREADS", 3)
 threads threads_count, threads_count
 
 # Specifies the `environment` that Puma will run in.
-rails_env = ENV.fetch("RAILS_ENV", "development")
+rails_env = ENV.fetch("RAILS_ENV", "production")
 environment rails_env
 
 case rails_env
