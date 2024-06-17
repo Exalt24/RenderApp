@@ -56,10 +56,9 @@ module Resolvers
       branches.map { |branch| normalize_filters(branch) }
     end
 
-    # Resolve method defines the resolver's behavior
-    def resolve(filter: nil)
-      scope = apply(filter)
-      scope
+    # Implement the call method required for SearchObject
+    def call(_obj, args, _ctx)
+      apply(args[:filter])
     end
   end
 end
