@@ -1,5 +1,4 @@
-# link_search_test.rb
-require 'test_helper'
+require './test/test_helper'
 
 module Resolvers
   class LinksSearchTest < ActiveSupport::TestCase

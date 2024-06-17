@@ -1,4 +1,4 @@
-require 'test_helper'
+require './test/test_helper'
 
 class Mutations::CreateLinkTest < ActiveSupport::TestCase
   def perform(user: nil, **args)
