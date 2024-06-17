@@ -8,6 +8,12 @@ export default defineConfig({
     RubyPlugin()
   ],
   build: {
-    outDir: 'public/dist',
-  }
+    outDir: 'public/dist', // Output directory for built files
+    manifest: true, // Generate manifest files
+    rollupOptions: {
+      input: {
+        application: './app/javascript/entrypoints/application.js', // Entry point for your application
+      },
+    },
+  },
 });
