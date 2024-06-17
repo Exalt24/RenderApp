@@ -36,11 +36,11 @@ gem "bootsnap", require: false
 
 gem "graphql", ">= 2.3.5"
 
-gem 'search_object_graphql', '~> 1.0', '>= 1.0.5'
+gem "search_object_graphql", "~> 1.0", ">= 1.0.5"
 
-gem 'vite_rails'
+gem "vite_rails"
 
-gem 'search_object'
+gem "search_object"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
