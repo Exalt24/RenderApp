@@ -1,4 +1,7 @@
 {
+  "name": "myapp",
+  "version": "1.0.0",
+  "license": "MIT",
   "devDependencies": {
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.1.0",
