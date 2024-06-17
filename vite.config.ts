@@ -1,10 +1,13 @@
-import { defineConfig } from 'vite'  
-import RubyPlugin from 'vite-plugin-ruby'  
-import vue from '@vitejs/plugin-vue'  
-  
-export default defineConfig({  
-  plugins: [  
-    RubyPlugin(),  
-    vue()  
-  ],  
-})  
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import RubyPlugin from 'vite-plugin-ruby';
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    RubyPlugin()
+  ],
+  build: {
+    outDir: 'public/dist',
+  }
+});
