@@ -13,3 +13,6 @@ bundle exec rails assets:precompile
 
 # Clean up assets after precompilation (optional, but can be useful to reduce disk space usage)
 bundle exec rails assets:clean
+
+
+# bundle exec rake db:migrate RAILS_ENV=production
