@@ -9,7 +9,7 @@ class Mutations::SignInUserTest < ActiveSupport::TestCase
     User.create!(
       name: 'Test User',
       email: 'email@example.com',
-      password: '[omitted]',
+      password: 'testPassword',
     )
   end
 
