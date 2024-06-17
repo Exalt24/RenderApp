@@ -3,7 +3,7 @@
 set -o errexit
 
 # Install all required gems specified in Gemfile.lock
-bundle install without 'development test'
+bundle install
 
 # Precompile assets for production
 bundle exec rails assets:precompile
