@@ -9,7 +9,7 @@
     export default {
         data() {
             return {
-            course: 'Intro to Vue 3 and Rails'
+            course: 'Daniel Alexis Cruz'
             }
         }
     }
