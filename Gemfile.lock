@@ -208,6 +208,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.0)
     rack (3.1.4)
+    rack-cors (2.0.2)
+      rack (>= 2.0.0)
     rack-proxy (0.7.7)
       rack
     rack-session (2.0.0)
@@ -380,6 +382,7 @@ DEPENDENCIES
   minitest-reporters
   pg (~> 1.1)
   puma (>= 5.0)
+  rack-cors
   rails (~> 7.2.0.beta2)
   rails-controller-testing
   rubocop-rails-omakase

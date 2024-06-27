@@ -24,5 +24,15 @@ module Myapp
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.assets.paths << Rails.root.join("node_modules")
+
+    config.middleware.use Rack::Cors do
+      allow do
+        origins "*"
+        resource "*",
+                 headers: :any,
+                 expose: %w[access-token expiry token-type uid client],
+                 methods: %i[get post options put delete]
+      end
+    end
   end
 end
