@@ -113,7 +113,7 @@ GEM
       activesupport (>= 6.1)
     graphiql-rails (1.10.0)
       railties
-    graphql (2.3.5)
+    graphql (2.3.7)
       base64
     guard (2.18.1)
       formatador (>= 0.2.4)
