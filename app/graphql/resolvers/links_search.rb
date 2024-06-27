@@ -1,17 +1,17 @@
-require 'search_object'
-require 'search_object/plugin/graphql'
+require "search_object"
+require "search_object/plugin/graphql"
 
 module Resolvers
   class LinksSearch < GraphQL::Schema::Resolver
     include SearchObject.module(:graphql)
 
-    type [Types::LinkType], null: true
+    type [ Types::LinkType ], null: true
 
     # Scope is starting point for search
     scope { Link.all }
 
     class LinkFilter < ::Types::BaseInputObject
-      argument :OR, [LinkFilter], required: false
+      argument :OR, [ LinkFilter ], required: false # rubocop:disable Layout/SpaceInsideArrayLiteralBrackets
       argument :description_contains, String, required: false
       argument :url_contains, String, required: false
     end

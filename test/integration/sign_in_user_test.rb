@@ -1,4 +1,4 @@
-require './test/test_helper'
+require "./test/test_helper"
 
 class Mutations::SignInUserTest < ActiveSupport::TestCase
   def perform(args = {})
@@ -7,13 +7,13 @@ class Mutations::SignInUserTest < ActiveSupport::TestCase
 
   def create_user
     User.create!(
-      name: 'Test User',
-      email: 'email@example.com',
-      password: 'testPassword',
+      name: "Test User",
+      email: "email@example.com",
+      password: "testPassword",
     )
   end
 
-  test 'success' do
+  test "success" do
     user = create_user
 
     result = perform(
@@ -27,17 +27,17 @@ class Mutations::SignInUserTest < ActiveSupport::TestCase
     assert_equal result[:user], user
   end
 
-  test 'failure because no credentials' do
+  test "failure because no credentials" do
     assert_nil perform
   end
 
-  test 'failure because wrong email' do
+  test "failure because wrong email" do
     create_user
-    assert_nil perform(credentials: { email: 'wrong' })
+    assert_nil perform(credentials: { email: "wrong" })
   end
 
-  test 'failure because wrong password' do
+  test "failure because wrong password" do
     user = create_user
-    assert_nil perform(credentials: { email: user.email, password: 'wrong' })
+    assert_nil perform(credentials: { email: user.email, password: "wrong" })
   end
 end

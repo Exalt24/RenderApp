@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get "static_pages/home"
   get "static_pages/help"
-  get 'static_pages/about'
-  get 'static_pages/contact'
+  get "static_pages/about"
+  get "static_pages/contact"
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
@@ -22,5 +22,5 @@ Rails.application.routes.draw do
   # root "render#index"
   root to: "static_pages#home"
 
-  match '*path', to: 'application#preflight', via: [:options]
+  match "*path", to: "application#preflight", via: [ :options ]
 end
