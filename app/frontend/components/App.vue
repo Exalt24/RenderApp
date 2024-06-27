@@ -1,7 +1,6 @@
 <template>
     <div>
         <h3>{{ course }}</h3>
-        <button-counter></button-counter>
     </div>
 </template>
 
