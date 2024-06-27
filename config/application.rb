@@ -25,7 +25,7 @@ module Myapp
     # config.eager_load_paths << Rails.root.join("extras")
     config.assets.paths << Rails.root.join("node_modules")
 
-    config.middleware.use Rack::Cors do
+    config.middleware.insert_before 0, Rack::Cors, debug: true, logger: (-> { Rails.logger }) do
       allow do
         origins "*"
         resource "*",
