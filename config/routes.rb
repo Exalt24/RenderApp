@@ -22,5 +22,5 @@ Rails.application.routes.draw do
   # root "render#index"
   root to: "static_pages#home"
 
-  match "*path", to: "application#preflight", via: [ :options ]
+  match "*path", to: "application#options", via: :options
 end
