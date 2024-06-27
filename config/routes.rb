@@ -20,5 +20,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "render#index"
-  root "static_pages#home"
+  root to: "static_pages#home"
 end
