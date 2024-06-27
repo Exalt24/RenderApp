@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "render#index"
   root to: "static_pages#home"
+
+  match '*path', to: 'application#preflight', via: [:options]
 end
