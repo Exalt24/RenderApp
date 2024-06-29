@@ -4,6 +4,9 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/jquery": "^3.5.30",
+    "@types/node": "^20.14.9",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.1.0",
     "postcss-preset-env": "^9.5.14",
@@ -12,10 +15,13 @@
   },
   "dependencies": {
     "@apollo/client": "^3.10.5",
+    "@popperjs/core": "^2.11.8",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/apollo-option": "^4.0.0",
+    "bootstrap": "^5.3.3",
     "graphql": "^16.8.2",
     "graphql-tag": "^2.12.6",
+    "jquery": "^3.7.1",
     "postcss": "^8.4.38",
     "vue": "^3.4.27"
   }

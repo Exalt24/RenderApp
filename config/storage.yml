@@ -32,3 +32,23 @@ local:
 #   service: Mirror
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
+
+# s3_west_coast:
+#   service: S3
+#   access_key_id: "<YOUR_S3_WEST_COAST_ACCESS_KEY_ID>"
+#   secret_access_key: "<YOUR_S3_WEST_COAST_SECRET_ACCESS_KEY>"
+#   region: "us-west-1"
+#   bucket: "<YOUR_S3_WEST_COAST_BUCKET>"
+
+# s3_east_coast:
+#   service: S3
+#   access_key_id: "<YOUR_S3_EAST_COAST_ACCESS_KEY_ID>"
+#   secret_access_key: "<YOUR_S3_EAST_COAST_SECRET_ACCESS_KEY>"
+#   region: "us-east-1"
+#   bucket: "<YOUR_S3_EAST_COAST_BUCKET>"
+
+# production:
+#   service: Mirror
+#   primary: s3_east_coast
+#   mirrors:
+#     - s3_west_coast

@@ -3,6 +3,12 @@ import App from "../../frontend/components/App.vue"
 import ButtonCounter from '../../frontend/components/ButtonCounter.vue'
 import { ApolloClient, InMemoryCache } from '@apollo/client/core'
 import { createApolloProvider } from '@vue/apollo-option'
+var jQuery = require("jquery");
+
+global.$ = global.jQuery = jQuery;
+window.$ = window.jQuery = jQuery;
+
+require("bootstrap");
 
 // Cache implementation
 const cache = new InMemoryCache()
@@ -26,3 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
   app.component('ButtonCounter', ButtonCounter)
   app.mount('#app')
 })
+

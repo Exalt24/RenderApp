@@ -3,3 +3,9 @@
 //= link_tree ../../javascript .js
 //= link_tree ../../../vendor/javascript .js
 //= link application.css
+//= link image_preview.js
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require bootstrap
+//= require activestorage
