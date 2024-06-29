@@ -3,6 +3,8 @@ import App from "../../frontend/components/App.vue"
 import ButtonCounter from '../../frontend/components/ButtonCounter.vue'
 import { ApolloClient, InMemoryCache } from '@apollo/client/core'
 import { createApolloProvider } from '@vue/apollo-option'
+import Rails from "@rails/ujs"
+Rails.start()
 var jQuery = require("jquery");
 
 global.$ = global.jQuery = jQuery;

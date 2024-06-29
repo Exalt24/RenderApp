@@ -6,4 +6,3 @@ require("bootstrap")
 import "bootstrap/dist/css/bootstrap.css"
 require("assets/stylesheets/custom.scss");
 require("channels")
-

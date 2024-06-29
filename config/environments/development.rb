@@ -78,5 +78,5 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
 
   # Allow connections to local server.
-  config.hosts.clear
+  # config.hosts.clear
 end

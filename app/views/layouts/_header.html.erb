@@ -15,11 +15,7 @@
                             <li><%= link_to "Profile", current_user %></li>
                             <li><%= link_to "Settings", '#' %></li>
                             <li class="divider"></li>
-                            <li>
-                                <%= form_with(url: logout_path, method: :delete, local: true) do %>
-                                    <%= submit_tag "Log out", class: "btn btn-link", data: { disable_with: "Logging out..." } %>
-                                <% end %>
-                            </li>
+                            <li><%= link_to "Logout", logout_path, method: :delete, class: "btn btn-link", data: { confirm: "Are you sure?" } %></li>
                         </ul>
                     </li>
                 <% else %>

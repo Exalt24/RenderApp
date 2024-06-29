@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   get "contact" => "static_pages#contact"
   get "signup" => "users#new"
   get "login" => "sessions#new"
+  get "messages" => "messages#create"
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
   resources :users
+  resources :messages
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
