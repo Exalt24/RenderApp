@@ -25,5 +25,33 @@ class UserTest < ActiveSupport::TestCase
       user.email = invalid_address
       assert_not user.valid?, "#{invalid_address.inspect} should be invalid"
     end
+
+    assert_not user.authenticated?(:remember, "")
+    user.microposts.create!(content: "Lorem ipsum")
+    assert_difference "Micropost.count", -1 do
+      user.destroy
+    end
+
+    michael = users(:michael)
+    archer = users(:archer)
+    lana = users(:lana)
+    assert_not michael.following?(archer)
+    michael.follow(archer)
+    assert michael.following?(archer)
+    assert archer.followers.include?(michael)
+    michael.unfollow(archer)
+    assert_not michael.following?(archer)
+    # Posts from followed user
+    lana.microposts.each do |post_following|
+      assert michael.feed.include?(post_following)
+    end
+    # Posts from self
+    michael.microposts.each do |post_self|
+      assert michael.feed.include?(post_self)
+    end
+    # Posts from unfollowed user
+    archer.microposts.each do |post_unfollowed|
+      assert_not michael.feed.include?(post_unfollowed)
+    end
   end
 end

@@ -1,0 +1,25 @@
+<%= form_for(@user, html: { multipart: true }) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+  
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+  
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+  
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+  <% if local_assigns[:show_avatar_edit_field] %>
+    <%= f.label :avatar, "Change Avatar" %>
+    <div class="avatar_edit">
+      <%= avatar_for @user %>
+      <%= f.file_field :avatar, class: 'form-control', accept: 'image/*', direct_upload: true %>
+    </div>
+  <% end %>
+  
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

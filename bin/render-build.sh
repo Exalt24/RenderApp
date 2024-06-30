@@ -17,4 +17,4 @@ rm -rf test/
 rm -rf spec/
 
 # Run database migrations
-bundle exec rails db:migrate
+bundle exec rails db:migrate:reset

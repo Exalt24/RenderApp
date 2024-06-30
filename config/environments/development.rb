@@ -39,7 +39,20 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    user_name: "1ab9ddd11c89e0",
+    password: "fa330176bf151a",
+    address: "sandbox.smtp.mailtrap.io",
+    host: "sandbox.smtp.mailtrap.io",
+    port: "2525",
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
+
+  host = "localhost:5100"
+  config.action_mailer.default_url_options = { host: host, protocol: "http" }
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
