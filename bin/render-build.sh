@@ -17,4 +17,4 @@ rm -rf test/
 rm -rf spec/
 
 # Run database migrations
-bundle exec rails db:migrate:reset
+DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bundle exec rake db:migrate:reset
