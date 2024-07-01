@@ -62,7 +62,7 @@ gem "image_processing"
 
 gem "faker"
 
-gem "will_paginate", "~> 3.1"
+gem "will_paginate", "~> 4.0"
 
 gem "bootstrap-will_paginate"
 
