@@ -161,6 +161,7 @@ GEM
     ffi (1.17.0-x86-linux-gnu)
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
+    fiber-storage (0.1.2)
     formatador (1.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -198,8 +199,9 @@ GEM
       signet (>= 0.16, < 2.a)
     graphiql-rails (1.10.0)
       railties
-    graphql (2.3.7)
+    graphql (2.3.12)
       base64
+      fiber-storage
     guard (2.18.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
